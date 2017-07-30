@@ -8,6 +8,58 @@ A Python tool to export annotations and highlights from a Kobo SQLite file.
 * License: the MIT License (MIT)
 * Contact: [click here](http://www.albertopettarin.it/contact.html)
 
+## Usage Python3
+
+```bash
+$ # print all annotations and highlights to stdout
+$ python3 export-kobo.py KoboReader.sqlite
+
+$ # print the help
+$ python3 export-kobo.py --help
+
+$ # export to file instead of stdout
+$ python3 export-kobo.py KoboReader.sqlite --output /path/to/out.txt
+
+$ # export in CSV format
+$ python3 export-kobo.py KoboReader.sqlite --csv
+
+$ # export in CSV format to file
+$ python3 export-kobo.py KoboReader.sqlite --csv --output /path/to/out.csv
+
+$ # export in Kindle My Clippings format
+$ python3 export-kobo.py KoboReader.sqlite --kindle
+
+$ # export in Kindle My Clippings to file
+$ python3 export-kobo.py KoboReader.sqlite --kindle --output /path/to/out.csv
+
+$ # export annotations only
+$ python3 export-kobo.py KoboReader.sqlite --annotations-only
+
+$ # export highlights only
+$ python3 export-kobo.py KoboReader.sqlite --highlights-only
+
+$ # export as CSV to file annotations only
+$ python3 export-kobo.py KoboReader.sqlite --csv  --annotations-only --output /path/to/out.txt
+
+$ # print the list of books with annotations or highlights to stdout
+$ python3 export-kobo.py KoboReader.sqlite --list
+
+$ # as above, but export to file
+$ python3 export-kobo.py KoboReader.sqlite --list --output /path/to/out.txt
+
+$ # as above, but export in CSV format
+$ python3 export-kobo.py KoboReader.sqlite --list --csv --output /path/to/out.txt
+
+$ # export annotations and highlights for the book "Alice in Wonderland"
+$ python3 export-kobo.py KoboReader.sqlite --book "Alice in Wonderland"
+
+$ # as above, assuming "Alice in Wonderland" has ID "12" in the list printed by --list
+$ python3 export-kobo.py KoboReader.sqlite --bookid 12
+
+$ # export annotations and highlights for book with id 12 to csv
+$ python3 export-kobo.py KoboReader.sqlite --bookid 12 --csv --output /file.csv
+```
+
 ## Usage
 
 ```bash
